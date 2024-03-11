@@ -1,0 +1,19 @@
+#define LED 10
+
+void setup() {
+  pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  // плавное включение led ленты
+  for(int i=0; i<=255; i++) {
+    analogWrite(LED, i);
+    delay(5);
+  }
+
+  // плавное выключение led ленты
+  for(int i=255; i>=0; i--) {
+    analogWrite(LED, i);
+    delay(5);
+  }
+}
